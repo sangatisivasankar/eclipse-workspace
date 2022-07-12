@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration
+	xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="A1"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="file"
+			value="C:\\Users\\Admin\\sfcc3-ws\\emp-management-app\\log\\ems.html" />
+		<param name="MaxFileSize" value="100MB" />
+		<param name="MaxBackupIndex" value="2" />
+		<!-- <layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n" />
+		</layout> -->
+		<layout class="org.apache.log4j.HTMLLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="STDOUT"
+		class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.SimpleLayout" />
+	</appender>
+	<!-- <category name="org.apache.log4j.xml">
+		<priority value="debug" />
+		<appender-ref ref="A1" />
+	</category> -->
+	<root>
+		<priority value="debug" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="A1" />
+	</root>
+</log4j:configuration>

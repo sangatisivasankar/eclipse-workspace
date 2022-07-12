@@ -1,0 +1,29 @@
+package com.sapient.sfcc.model;
+
+public class Super {
+	private String message;
+	
+	public Super() {
+		
+	}
+	
+	public Super(String message) {
+		this.message=message;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	@Override
+	public String toString() {
+		return "Super [message=" + message + "]";
+	}
+	
+	
+}
+
